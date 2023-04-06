@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs') %>
+<div class="row">
+    <div class="col-6 m-auto">
+        <h1>Form to add New Notifications</h1>
+        <form action="/notifications" method = "post">
+            <div class="mb-3">
+            <label for="body" class="form-label">Enter Job name</label>
+            <input type="text" class="form-control" id="body" name="body">
+            </div>
+
+            <div class="mb-3">
+            <label for="author" class="form-label">Enter Job Location</label>
+            <input type="text" class="form-control" id="author" name="author">
+            </div>
+
+            <div>
+                <input class="btn btn-primary" type="submit" class="submit">
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('./partials/footer.ejs') %>

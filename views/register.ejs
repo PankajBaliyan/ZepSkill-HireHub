@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs') %>
+    <div class="row">
+        <div class="col-6 m-auto">
+            <h1>Reginster User</h1>
+            <form action="/register" method = "post">
+                <div class="mb-3">
+                <label for="email" class="form-label">Enter Email Id</label>
+                <input type="text" class="form-control" id="email" name="username">
+                </div>
+
+                <div class="mb-3">
+                <label for="Password" class="form-label">Enter Password</label>
+                <input type="text" class="form-control" id="Password" name="Password">
+                </div>
+
+                <div>
+                    <input class="btn btn-primary" type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include('./partials/footer.ejs') %>

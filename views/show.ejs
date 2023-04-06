@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %>
+    <h1>Show Page for  <%= job.name %></h1>
+    <div> <%=job.address%> </div>
+    <div class="row">
+        <div class="col-2">
+            <img class="img-fluid" src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1" alt="">
+        </div>
+    </div>
+
+    <div> <%= job.type %> </div>
+    <div> <%= job.deadline %> </div>
+    <div> <%= job.package %> </div>
+    <div> <%= job.cgpa %> </div>
+
+    <a class="btn btn-warning" href="/jobs/<%= job._id %>/edit">Edit</a>
+    <form action="/jobs/<%= job._id%>?_method=DELETE" method="post">
+        <input class="btn btn-danger" type="submit" value="delete">
+    </form>
+<%- include('./partials/footer.ejs') %>
