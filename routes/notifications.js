@@ -36,7 +36,7 @@ router.post('/notifications', isLoggedIn, isAdmin, async function(req, res){
 //delete
 router.delete('/notifications/:id', isLoggedIn, isAdmin ,async function(req, res){
     try {
-        Notification.findByIdAndDelete(req.params.id);
+        await Notification.findByIdAndDelete(req.params.id);
         res.redirect('/notifications')
     } catch (error) {
         console.log('error while deleting notif', error)

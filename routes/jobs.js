@@ -55,7 +55,7 @@ router.post('/jobs', isLoggedIn, isAdmin ,async function(req, res){
 router.get('/jobs/:id', async function(req, res){
     try {
         let id = req.params.id;
-        let job = await Job.findById(id);
+        let job = await Job.findById(id).populate('appliedUsers');
         res.render('show', {job});
     } catch (error) {
         console.log('error while extracting all jobs', error);
